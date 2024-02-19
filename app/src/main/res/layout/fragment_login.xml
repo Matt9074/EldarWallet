@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="-1sp"
+        android:text="¡Te damos la bienvenida!"
+        android:textColor="#57584f"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/tv_explicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Ingresá tus datos para acceder a la aplicación"
+        android:textColor="#707070"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passTextInput"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btn_login"
+        style="@style/ConfirmButton"
+        android:layout_marginTop="36dp"
+        android:enabled="true"
+        android:text="Iniciar sesión"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_explicacion"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_recupero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="RECUPERÁ TU CLAVE O EMAIL"
+        android:textColor="#62bb46"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_registro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="INGRESÁ CON HUELLA DIGITAL"
+        android:textColor="#FF03DAC5"
+        android:textSize="11sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recupero" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="174dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="12sp"
+        android:text="¿PRIMERA VEZ QUE INGRESAS?"
+        android:textColor="#707070"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_registro2" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="44dp"
+        android:text="REGISTRATE"
+        android:textColor="#62bb46"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usserTextInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="16dp"
+        android:enabled="true"
+        android:hint="Usser"
+        android:textColorHint="@color/gray_50"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="12dp"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passTextInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:enabled="true"
+        android:hint="Password"
+        android:textColorHint="@color/gray_50"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usserTextInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/btn_showPass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/show_pass"
+        app:layout_constraintBottom_toBottomOf="@+id/passTextInput"
+        app:layout_constraintEnd_toEndOf="@+id/passTextInput"
+        app:layout_constraintTop_toTopOf="@+id/passTextInput"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/btn_hidePass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/hide_pass"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/passTextInput"
+        app:layout_constraintEnd_toEndOf="@+id/passTextInput"
+        app:layout_constraintTop_toTopOf="@+id/passTextInput"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="215dp"
+        android:layout_height="243dp"
+        android:src="@drawable/eldar_png"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.eldarfinal.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_createUsserFragment"
+            app:destination="@id/createUsserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.eldarfinal.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_qrFragment"
+            app:destination="@id/qrFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newCardFragment"
+            app:destination="@id/newCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="com.example.eldarfinal.QrFragment"
+        android:label="QrFragment" >
+        <action
+            android:id="@+id/action_qrFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCardFragment"
+        android:name="com.example.eldarfinal.NewCardFragment"
+        android:label="fragment_new_card"
+        tools:layout="@layout/fragment_new_card" >
+        <action
+            android:id="@+id/action_newCardFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createUsserFragment"
+        android:name="com.example.eldarfinal.login.CreateUsserFragment"
+        android:label="CreateUsserFragment" >
+        <action
+            android:id="@+id/action_createUsserFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

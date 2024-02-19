@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="215dp"
+        android:layout_height="243dp"
+        android:src="@drawable/eldar_png"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textHola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="-1sp"
+        android:text="Elegi tu usuario y clave"
+        android:textColor="#57584f"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usserTextInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Usser"
+        android:textColorHint="@color/gray_50"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="12dp"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullName_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passTextInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Password"
+        android:textColorHint="@color/gray_50"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usserTextInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dni_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/btn_showPass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/show_pass"
+        app:layout_constraintBottom_toBottomOf="@+id/passTextInput"
+        app:layout_constraintEnd_toEndOf="@+id/passTextInput"
+        app:layout_constraintTop_toTopOf="@+id/passTextInput"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/btn_hidePass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:background="@drawable/hide_pass"
+        app:layout_constraintBottom_toBottomOf="@+id/passTextInput"
+        app:layout_constraintEnd_toEndOf="@+id/passTextInput"
+        app:layout_constraintTop_toTopOf="@+id/passTextInput"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_explicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Ingresá tus datos para crear tu cuenta"
+        android:textColor="#707070"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passTextInput"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btn_create_usser"
+        style="@style/ConfirmButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="120dp"
+        android:enabled="true"
+        android:text="Crear Usuario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btn_back"
+        style="@style/ConfirmButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        android:enabled="true"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

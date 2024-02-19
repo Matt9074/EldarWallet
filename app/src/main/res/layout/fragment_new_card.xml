@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewCardFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/NumberTextInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="356dp"
+        android:hint="Numero de tarjeta"
+        android:textColorHint="@color/gray_50"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="12dp"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/numero_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/vencimientoTextImput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Vencimiento"
+        android:textColorHint="@color/gray_50"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="12dp"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NumberTextInput"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vencimiento_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/codigoTextImput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="361dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Codigo"
+        android:textColorHint="@color/gray_50"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="12dp"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_12"
+        app:boxCornerRadiusBottomStart="@dimen/radius_12"
+        app:boxCornerRadiusTopEnd="@dimen/radius_12"
+        app:boxCornerRadiusTopStart="@dimen/radius_12"
+        app:boxStrokeColor="@color/gray_50"
+        app:boxStrokeWidthFocused="@dimen/space_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vencimientoTextImput"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/codigo_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:theme="@android:style/Animation" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btn_AddCard"
+        style="@style/ConfirmButton"
+        android:layout_marginTop="36dp"
+        android:enabled="true"
+        android:text="Agregar tarjeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codigoTextImput"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="215dp"
+        android:layout_height="243dp"
+        android:src="@drawable/eldar_png"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textHola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="-1sp"
+        android:text="Ingresa los siguientes datos"
+        android:textColor="#57584f"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
